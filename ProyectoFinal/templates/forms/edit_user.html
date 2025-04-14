@@ -1,0 +1,43 @@
+<div class="modal fade" id="edit-user-modal" tabindex="-1"
+     aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="edit-user-form">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editUserModalLabel">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="edit-user-name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="edit-user-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-user-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="edit-user-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-user-password" class="form-label">Nueva Contraseña</label>
+                        <input type="password" class="form-control" id="edit-user-password">
+                    </div>
+                    {% if user_role == 'admin' %}
+                    <div class="mb-3">
+                        <label for="edit-user-role" class="form-label">Rol</label>
+                        <select class="form-control" id="edit-user-role">
+                            <option value="user">Usuario</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+                    </div>
+                    {% endif %}
+
+                </div>
+                <div id="form-user-id"></div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

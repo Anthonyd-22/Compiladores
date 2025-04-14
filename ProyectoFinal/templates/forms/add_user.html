@@ -1,0 +1,41 @@
+<div class="modal fade" id="add-user-form-modal" aria-hidden="true"
+     aria-labelledby="exampleModalToggleLabel"
+     tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="create-user-form">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="generalModalLabel">Crear Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="user-name-form" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="user-name-form" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="user-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="user-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="user-password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="user-password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="user-role" class="form-label">Rol</label>
+                        <select class="form-select" id="user-role">
+                            <option value="user" selected>Usuario</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

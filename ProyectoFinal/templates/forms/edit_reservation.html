@@ -1,0 +1,43 @@
+<div class="modal fade" id="edit-reservation-modal" tabindex="-1"
+     aria-labelledby="editReservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="edit-reservation-form">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editReservationModalLabel">Editar Reservación</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="edit-reservation-id">
+                    <div class="mb-3">
+                        <label for="edit-appointment-name" class="form-label">Nombre de la Cita</label>
+                        <input type="text" class="form-control" id="edit-appointment-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-appointment-date" class="form-label">Fecha y Hora</label>
+                        <input type="datetime-local" class="form-control" id="edit-appointment-date"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-notes" class="form-label">Notas</label>
+                        <textarea class="form-control" id="edit-notes" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-status" class="form-label">Estado</label>
+                        <select class="form-control" id="edit-status">
+                            <option value="scheduled">Programada</option>
+                            <option value="completed">Completada</option>
+                            <option value="cancelled">Cancelada</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container py-5">
+    <h2 class="text-center mb-4">Perfil del Usuario</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Tarjeta de información del usuario -->
+            <div class="card shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    Información del Usuario
+                </div>
+                <div class="card-body">
+                    <p><strong>Nombre:</strong> <span id="user-name-tag">Cargando...</span></p>
+                    <p><strong>Email:</strong> <span id="user-email-tag">Cargando...</span></p>
+                    <p><strong>Rol:</strong> <span id="user-role-tag">Cargando...</span></p>
+                    <p><strong>Fecha de Registro:</strong> <span id="user-registration-date">Cargando...</span></p>
+                </div>
+            </div>
+
+            <!-- Tabla de reservaciones del usuario -->
+            {% include "components/add_reservation_button.html" %}
+            <div class="card shadow">
+                <div class="card-header bg-secondary text-white">
+                    Mis Reservaciones
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>User ID</th>
+                                    <th>Nombre</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Notas</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="user-reservations-table-body">
+                                <tr><td colspan="7" class="text-center">Cargando reservas...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="text-center mt-4">
+                <a class="btn btn-outline-primary edit-current-user">Editar Perfil</a>
+                <a id="close-session" class="btn btn-outline-danger">Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+</div>

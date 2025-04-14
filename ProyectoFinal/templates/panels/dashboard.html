@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <h2 class="text-center">Panel de Administración</h2>
+
+    <!-- Tabla de Usuarios -->
+    <h3>Usuarios</h3>
+    <button class="btn btn-primary" data-bs-target="#add-user-form-modal" data-bs-toggle="modal">Add User
+    </button>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="users-table-body">
+                                <tr><td colspan="7" class="text-center">Cargando Usuarios...</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Tabla de Reservaciones -->
+    <h3>Reservaciones</h3>
+        {% include "components/add_reservation_button.html" %}
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Notes</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="reservations-table-body">
+                                <tr><td colspan="7" class="text-center">Cargando reservas...</td></tr>
+        </tbody>
+    </table>
+</div>
+
