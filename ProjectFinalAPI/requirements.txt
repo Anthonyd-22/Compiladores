@@ -1,0 +1,6 @@
+bcrypt
+PyJWT
+Flask
+python-dotenv
+supabase
+flask-cors
